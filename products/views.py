@@ -24,3 +24,14 @@ class ItemView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+@api_view(['GET'])
+def menu_list(request):
+    menu = [
+        {"name": "Margherita Pizza", "description": "Classic cheese and tomato pizza", "price": 350},
+        {"name": "Veg Burger", "description": "Burger with fresh Veggies and cheese", "price": 200},
+        {"name": "Pasta AlFredo", "description": "Creamy white sauce pasta", "price": 300},
+    ]
+    return Response(menu)
