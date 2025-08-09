@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import menu_list, home
+from .import views 
 
 urlpatterns = [
-    path('', home, name='home'), 
-    path('api/menu/', menu_list, name='menu-list'),
+    path('', views.home, name='home'), 
 ]
