@@ -1,25 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Restaurant Menu</title>
-    </head>
-    <body>
-        <h1>Restaurant Menu</h1>
-        <ul id="menu-list">
-        </ul>
+<section class="restaurent-into">
+    <h2>Find Us</h2>
+    <p><strong>Address:</strong> {{ restaurent-address }}</p>
 
-        <script>
-        fetch('/api/menu/')
-            .then(response => response.json())
-            .then(data => {
-            const menuList = document.getElementById('menu-list');
-            data.forEach(item => {
-                const li = doccument.createElement('li');
-                li.textContent = `${item.name} - ${item.price}`;
-                menuList.appendChild(li);
-                });
-             })    
-             .catch(error => console.error('Error fetching menu:', error));
-        </script>
-    </body>
-</html>         
+    <iframe
+       width="600"
+       height="450"
+       style="border:0"
+       loading="lazy"
+       allowfullscreen
+       referrerpolicy="no-referrer-when-downgrade"
+       src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q={{ restaurent-address|urlencode }}">
+    </iframe>
+</section>         
