@@ -129,3 +129,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Restaurnat Info
+Restaurnat_Name = "Tasty Treats"
+Restaurnat_Address = "123 Main Street, Cityville, Country"
