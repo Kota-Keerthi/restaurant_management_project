@@ -131,6 +131,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Restaurnat Info
-Restaurnat_Name = "The Spice Garden"
+Restaurnat_Name = "Tasty Bites"
 Restaurnat_Address = "123 Main Street, Cityville, Country"
 
