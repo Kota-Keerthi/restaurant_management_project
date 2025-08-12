@@ -1,9 +1,14 @@
-from django.shortcuts import render
-from .models import Restaurant
+from django.shortcuts import render, redirect
+from .models import ContactMessageForm
 # Create your views here.
 
 def home(request):
-    restaurant = Restaurant.objects.first()
-    return render(request, 'home.html', {
-        'restaurant_name': restaurant.name if restaurant else "Our Restaurant"
+    if request.merhod == 'POST':
+        form = ContactMessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = ContactMessageForm()        
+    return render(request, 'home.html', {'form': form})
     })
