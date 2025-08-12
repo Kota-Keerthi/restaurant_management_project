@@ -1,14 +1,6 @@
-<section class="restaurent-into">
-    <h1>Welcome to {{ restaurent_name }}</h1>
-    <p><strong>Address:</strong> {{ restaurent-address }}</p>
-
-    <iframe
-       width="600"
-       height="450"
-       style="border:0"
-       loading="lazy"
-       allowfullscreen
-       referrerpolicy="no-referrer-when-downgrade"
-       src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q={{ restaurent-address|urlencode }}&output=embed">
-    </iframe>
-</section>         
+<h2>Contact Us</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>    
