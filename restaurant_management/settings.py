@@ -133,4 +133,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Restaurnat Info
 Restaurnat_Name = "Tasty Bites"
 Restaurnat_Address = "123 Main Street, Cityville, Country"
-
+INSTALLED_APPS = [
+    "account",
+]
